@@ -24,7 +24,7 @@
 	- TGA		load & save
 	- DDS		load & save
 	- PNG		load & save
-	- JPG		load
+	- JPG		load & save
 	- PSD		load
 	- HDR		load
 	- PIC		load
@@ -122,13 +122,15 @@ enum
 	(BMP supports uncompressed RGB)
 	(DDS supports DXT1 and DXT5)
 	(PNG supports RGB / RGBA)
+	(JPG supports baseline JPEG, compressed RGB, best quality option)
 **/
 enum
 {
 	SOIL_SAVE_TYPE_TGA = 0,
 	SOIL_SAVE_TYPE_BMP = 1,
 	SOIL_SAVE_TYPE_PNG = 2,
-	SOIL_SAVE_TYPE_DDS = 3
+	SOIL_SAVE_TYPE_DDS = 3,
+	SOIL_SAVE_TYPE_JPG = 4
 };
 
 /**

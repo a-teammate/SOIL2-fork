@@ -109,6 +109,9 @@
 #include "stb_image.h"
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include "stb_image_write.h"
+#define TJE_IMPLEMENTATION
+#include "tiny_jpeg.h"
+
 #include "image_helper.h"
 #include "image_DXT.h"
 #include "pvr_helper.h"
@@ -1900,6 +1903,13 @@ int
 	{
 		return 0;
 	}
+
+	if( image_type == SOIL_SAVE_TYPE_JPG )
+	{
+		/*we use the wrapper for best quality jpg encoding*/
+		save_result = tje_encode_to_file( filename, 
+				width, height, channels, (const unsigned char *)data );
+	} else
 	if( image_type == SOIL_SAVE_TYPE_BMP )
 	{
 		save_result = stbi_write_bmp( filename,
