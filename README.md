@@ -38,7 +38,8 @@ Public Domain
     * TGA - Greyscale or RGB or RGBA, uncompressed
     * BMP - RGB, uncompressed
     * DDS - RGB as DXT1, or RGBA as DXT5
-    * PNG
+    * PNG - RGB/RGBA
+    * JPG - RGB (baseline DCT JPEG compression)
 
 
 * Can load an image file directly into a 2D OpenGL texture, optionally performing the following functions:
